@@ -1,0 +1,9 @@
+install dconf with ubuntu software
+
+// backup
+dconf dump /org/gnome/desktop/wm/keybindings/ > wm-keybindings.dconf.bak
+dconf dump /org/gnome/mutter/keybindings/ > mu-keybindings.dconf.bak
+    
+// restore
+dconf load /org/gnome/desktop/wm/keybindings/ < wm-keybindings.dconf.bak
+dconf load /org/gnome/mutter/keybindings/ < mu-keybindings.dconf.bak
