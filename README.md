@@ -23,6 +23,16 @@ l|right
 
 ---
 
+**move by character/line (arrows)** [vsc]
+alt|move cursor
+-:|:-
+e|up
+s|down
+s|left
+f|right
+
+---
+
 **move by word/10 lines** [vsc]
 ctrl+alt_gr|move cursor
 -:|:-
@@ -38,7 +48,7 @@ alt_gr|move cursor
 -:|:-
 o|page up
 .|page down
-u|beggining of line
+u|beginning of line
 m|end of line
 
 ---
@@ -73,7 +83,8 @@ u|beggining of line
 m|end of line
 
 ---
-## move line
+
+## moving/copying line
 **move line arrowkey direction by line/tab** [vsc]
 shift+alt|move
 -:|:-
@@ -82,8 +93,13 @@ k|line down
 j|line left
 l|line right
 
-j|navigate back
-l|navigate forward
+---
+
+**copy line** [vsc]
+ctrl+° ctrl+shift+°|-
+-:|:-
+i|copy Lines Up
+k|copy Lines Down
 
 ---
 
@@ -93,23 +109,36 @@ ctrl+shift|scroll line
 -:|:-
 i|scrollLineUp
 k|scrollLineDown
--:|-
+
 ctrl+shift+alt|scroll page
-j|scrollPageUp
-l|scrollPageDown
+-:|:-
+i|scrollPageUp
+k|scrollPageDown
 
 ---
 
 ## switch editor
-**switch within/without goup** [vsc]
+**switch within goup** [vsc]
 ctrl+shift|-
 -:|:-
 j|previous Editor In Group
 l|next Editor in Group
-ctrl+shift+alt|-
+
+-|-
+-:|:-
+ctrl+tab|next Editor in Group
+ctrl+shift+tab|previous Editor In Group
+
+---
+
+## switch editor
+**switch without goup** [vsc]
+
+ctrl+° ctrl+shift+°|-
 -:|-
 j|previous Editor
 l|next Editor
+
 ctrl+alt_gr|-
 -:|-
 o|previous Editor
@@ -123,10 +152,19 @@ ctrl+shift+alt_gr|-
 -:|:-
 o|Move Editor Left
 .|Move Editor Right
-ctrl+alt+alt_gr|-
+
+ctrl+° ctrl+alt+°|-
 -:|-
 j|Move Editor into Previous Group
 l|Move Editor into Next Group
+
+---
+## navigating
+**navigate back/forward**
+alt|-
+-:|:-
+u|navigate back
+m|navigate forward
 
 ---
 
@@ -141,11 +179,22 @@ bksp|-|shift
 ---
 
 ## diacritics
-**move *ó* and *ł* one key right** [xkb]
+**move *<ó>* and *<ł>* one key right** [xkb]
 alt_gr|-
 -:|:-
 p|ó
 ;|ł
+
+---
+
+## minor tweaks
+**minor replacements/tweaks**
+-|-
+-:|:-
+ctrl+j ctrl+j|toggle panel
+ctrl+k ctrl+shift+i|format document
+ctrl+shift+f|select highlights
+ctrl+shift+4|terminal.kill
 
 ---
 
