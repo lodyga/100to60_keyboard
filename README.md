@@ -1,17 +1,18 @@
-100% size, 60% efficiency (at most) 
-based on Polish 
-Layout mostly for vsc, but arrows work also in ubuntu
+# What is this?
+100% size, 60% efficiency (at most) keyboard layout based on Polish. Layout made for VSC on Ubuntu.
 
-# installation
-1. modify /usr/share/X11/xkb/symbols/pl
-2. modify /usr/share/X11/xkb/rules/evdev.xml, restart session
-3. modify keybinding.json
-4. install dconf with ubuntu software
-5. install Tweaks with sudo apt install gnome-tweak-tool
+# What does it do?
+Moves cursor movement (arrows), selecting, moving, copying, scorlling, switching, navigating, resizing to `ijkl` and vicinity. 
+
+# Installation
+1. apply /usr/share/X11/xkb/symbols/pl
+2. apply /usr/share/X11/xkb/rules/evdev.xml, restart session
+3. apply keybinding.json
+4. install dconf with ubuntu software and apply files from dconf folder
+5. install Tweaks with `sudo apt install gnome-tweak-tool`
 
 
-
-# layout
+# Layout
 ## cursor movement
 **move by character/line (arrows)** [xkb]
 alt_gr|move cursor
@@ -107,13 +108,13 @@ k|copy Lines Down
 **scroll line/page** [vsc]
 ctrl+shift|scroll line
 -:|:-
-i|scrollLineUp
-k|scrollLineDown
+i|scroll Line Up
+k|scroll Line Down
 
 ctrl+shift+alt|scroll page
 -:|:-
-i|scrollPageUp
-k|scrollPageDown
+i|scroll PageUp
+k|scroll PageDown
 
 ---
 
@@ -131,7 +132,6 @@ ctrl+shift+tab|previous Editor In Group
 
 ---
 
-## switch editor
 **switch without goup** [vsc]
 
 ctrl+° ctrl+shift+°|-
@@ -228,3 +228,7 @@ i|maximize
 k|unmaximize
 j|toggle tiled left
 l|toggle tiled right
+
+
+# Credits
+Łukasz Łodożyński <lodyga@o2.pl>

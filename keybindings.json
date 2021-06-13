@@ -27,7 +27,7 @@ inputFocus	    Any text input area has focus (editors or text boxes).
   {
     "key": "shift+backspace",
     "command": "deleteRight",
-    "when": "textInputFocus"
+    "when": "textInputFocus && !editorReadonly"
   },
   {
     "key": "ctrl+shift+backspace",
@@ -427,5 +427,10 @@ inputFocus	    Any text input area has focus (editors or text boxes).
   {
     "key": "ctrl+j ctrl+j",
     "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "delete",
+    "command": "-deleteRight",
+    "when": "textInputFocus"
   }
 ]
