@@ -1,15 +1,23 @@
 # What is this?
-100% size, 60% efficiency (at most) keyboard layout based on Polish. Layout made for VSC on Ubuntu.
+100% size, 60% efficiency (at most) keyboard layout (based on Polish). Layout made for VSC 1.57.0 on Ubuntu 20.04.2 LTS.
 
 # What does it do?
-Moves cursor movement (arrows), selecting, moving, copying, scorlling, switching, navigating, resizing to `ijkl` and vicinity. 
+Moves cursor movement (arrows), selecting, moving, copying, scorlling, switching, navigating, resizing to `ijkl` and vicinity.
+## Core functions
+- cursor movement with `ijkl`
+- selecting characters/lines with `ijkl`
+- Home, End, PageUp, PageDown on `umo.`
+- moving/copying line with `ijkl`
+- scrolling, moving and switching editors with `ijkl`
+- improved `Backspece`
 
-# Installation
-1. apply /usr/share/X11/xkb/symbols/pl
-2. apply /usr/share/X11/xkb/rules/evdev.xml, restart session
-3. apply keybinding.json
-4. install dconf with ubuntu software and apply files from dconf folder
-5. install Tweaks with `sudo apt install gnome-tweak-tool`
+# Installation 
+- add keyboard layout from attached `pl` to /usr/share/X11/xkb/symbols/pl
+- update /usr/share/X11/xkb/rules/evdev.xml with `evdev.xml` (add it among other Polish variants)
+- restart Ubuntu and choose `Polish (60%)` keyboard layout
+- add `keybinding.json` to VSC (ctrl+k ctr+s, Open Keyboard Shortcuts)
+- install dconf with ubuntu software and apply files from dconf folder
+- install Tweaks with `sudo apt install gnome-tweak-tool`
 
 
 # Layout
