@@ -1,26 +1,37 @@
-# What is this?
-100% size, 60% efficiency (at most) keyboard layout (based on Polish). Layout made for VSC 1.57.0 on Ubuntu 20.04.2 LTS.
+# Intro
+## What is this?
+100% size with 60% efficiency (at most) keyboard layout, made for VSC 1.57.0 on Ubuntu 20.04.2 LTS.
 
-# What does it do?
-Moves cursor movement (arrows), selecting, moving, copying, scorlling, switching, navigating, resizing to `ijkl` and vicinity.
-## Core functions
-- cursor movement with `ijkl`
-- selecting characters/lines with `ijkl`
-- Home, End, PageUp, PageDown on `umo.`
-- moving/copying line with `ijkl`
-- scrolling, moving and switching editors with `ijkl`
+
+## Why do I need it?
+Learned touch typing and tired of moving right hand fingers form `jkl` to &#8592;&#8595;&#8594; constantly? That's why!
+
+## What does it do?
+Cursor movement (arrows), selecting, moving, copying, scorlling, switching, navigating, resizing with `ijkl` (and vicinity) in `VSC` and `Ubuntu`.
+
+### Core functions
+- cursor movement (arrows) with `ijkl`
+- selecting characters, lines with `ijkl`
+- Home, End, PageUp, PageDown diagonally to `ijkl` like in numpad
+- moving, copying lines with in VSC `ijkl`
+- scrolling, moving and switching VSC editors with `ijkl`
+- switching, moving Ubuntu workspaces with `ijkl`
 - improved `Backspece`
+
+
 
 # Installation 
 - add keyboard layout from attached `pl` to /usr/share/X11/xkb/symbols/pl
 - update /usr/share/X11/xkb/rules/evdev.xml with `evdev.xml` (add it among other Polish variants)
 - restart Ubuntu and choose `Polish (60%)` keyboard layout
 - add `keybinding.json` to VSC (ctrl+k ctr+s, Open Keyboard Shortcuts)
-- install dconf with ubuntu software and apply files from dconf folder
-- install Tweaks with `sudo apt install gnome-tweak-tool`
+- install line-jumper (in VSC <ctrl+shift+x>) 
+- install `dconf` with ubuntu software and apply files from dconf folder
+- install `Tweaks` with `sudo apt install gnome-tweak-tool`
 
 
-# Layout
+
+# Keyboard layout
 ## cursor movement
 **move by character/line (arrows)** [xkb]
 alt_gr|move cursor
@@ -197,12 +208,21 @@ p|ó
 
 ## minor tweaks
 **minor replacements/tweaks**
--|-
+shortcut|command
 -:|:-
 ctrl+j ctrl+j|toggle panel
 ctrl+k ctrl+shift+i|format document
 ctrl+shift+f|select highlights
 ctrl+shift+4|terminal.kill
+
+Caps_Lock|Switch
+-:|:-
+shift_L+shift_P|On
+shift_P+shift_L|On
+shift_L|Off
+shift_P|Off
+
+
 
 ---
 
@@ -236,6 +256,7 @@ i|maximize
 k|unmaximize
 j|toggle tiled left
 l|toggle tiled right
+
 
 
 # Credits

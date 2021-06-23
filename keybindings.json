@@ -226,22 +226,25 @@ inputFocus	    Any text input area has focus (editors or text boxes).
   },
   // move through eitors/groups
   {
-    "key": "ctrl+shift+l",
-    "command": "workbench.action.nextEditorInGroup"
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.previousEditor"
   },
   {
-    "key": "ctrl+shift+j",
-    "command": "workbench.action.previousEditorInGroup"
+    "key": "ctrl+shift+l",
+    "command": "workbench.action.nextEditor"
+  },
+  // to powinno przchodzić na kojelną aktywną grupę, ale nie działa
+  {
+    //"key": "ctrl+shift+alt+j",
+    "key": "ctrl+j ctrl+shift+j",
+    //"command": "workbench.action.previousEditor"
+    "command": "workbench.action.moveActiveEditorGroupLeft"
   },
   {
     //"key": "ctrl+shift+alt+l",
     "key": "ctrl+l ctrl+shift+l",
-    "command": "workbench.action.nextEditor"
-  },
-  {
-    //"key": "ctrl+shift+alt+j",
-    "key": "ctrl+j ctrl+shift+j",
-    "command": "workbench.action.previousEditor"
+    //"command": "workbench.action.nextEditor"
+    "command": "workbench.action.moveActiveEditorGroupRight"
   },
   // remove some alt lineJumpers
   {
