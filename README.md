@@ -1,6 +1,6 @@
 # Intro
 ## What is this?
-100% size with 60% efficiency (at most) keyboard layout, made for VSC 1.57.0 on Ubuntu 20.04.2 LTS.
+Keyboad layout that aims to use 60% of keyboard with (at least) 101% efficiency. Made for VSC 1.57.0 on Ubuntu 20.04.2 LTS.
 
 
 ## Why do I need it?
@@ -214,6 +214,8 @@ ctrl+j ctrl+j|toggle panel
 ctrl+k ctrl+shift+i|format document
 ctrl+shift+f|select highlights
 ctrl+shift+4|terminal.kill
+alt_gr+,|down
+Caps_Lock|alt_gr
 
 Caps_Lock|Switch
 -:|:-

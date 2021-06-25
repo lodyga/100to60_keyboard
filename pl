@@ -53,15 +53,21 @@ xkb_symbols "60" {
     key <AC09>	{ [         l,          L,      Right,      Right   ]	};
     // mod średnika pod ł
     key <AC10>	{ [   semicolon,    colon,      lstroke,    Lstroke ] };
+    // to by było dobre miejsce na Next, gdyby nie ł
+    // key <AC10>	{ [   semicolon,    colon,      Next,    Next ] };
+
     
     key <AB01>	{ [         z,          Z,    zabovedot,    Zabovedot ]	};
     key <AB02>	{ [         x,          X,       zacute,       Zacute ]	};
     key <AB03>	{ [         c,          C,       cacute,       Cacute ]	};
     key <AB04>	{ [         v,          V, doublelowquotemark, leftsinglequotemark ] };
     key <AB05>	{ [         b,          B, rightdoublequotemark, leftdoublequotemark ] };
+    // to by było dobre miejsce na Home, gdyby nie ń
+    // key <AB06>	{ [         n,          N,       Home,       Home]	};
     key <AB06>	{ [         n,          N,       nacute,       Nacute ]	};
     key <AB07>	{ [         m,          M,      End,        End      ]	};
-    key <AB08>	{ [     comma,       less, lessthanequal,    greaterthanequal ]	};
+    // key <AB08>	{ [     comma,       less, lessthanequal,    greaterthanequal ]	};
+    key <AB08>	{ [     comma,       less, Down,    Down ]	};
     key <AB09>	{ [    period,    greater,      Next,       Next      ]	};
 
     // key.type[Group1] = "ONE_LEVEL";
@@ -73,9 +79,10 @@ xkb_symbols "60" {
     // key <CAPS> {	[ ISO_Level5_Shift		]	};
     key <CAPS> { [ ISO_Level3_Shift ] };
 
-    // key <SPCE>	{ [     space,      Return, underscore, nobreakspace ]	};
+    // key <SPCE>	{ [     space,      space, underscore, nobreakspace ]	};
     key <SPCE>	{ [     space,      Tab, underscore, nobreakspace ]	};
-    // key <BKSP> {	[ BackSpace, Delete	]	}; // ten delete wciaz robi problemy    
+    // key <BKSP> {	[ BackSpace, Delete	]	}; // VSC delete doesnt work
+    // key <BKSP>	{ type="TWO_LEVEL", [         BackSpace, Delete,     BackSpace, Delete ]	};
     key <BKSL>	{ [ backslash,        bar,   grave,   dead_breve ]	};
     // key <RTRN> {	[ Return		]	};
 
@@ -85,7 +92,7 @@ xkb_symbols "60" {
     include "kpdl(comma)"
 
     // works without ralt - strange
-    // include "level3(ralt_switch)"
+    include "level3(ralt_switch)"
     // include "group(shifts_toggle)"
 
     // include "shift(lshift_both_capslock_cancel)"
