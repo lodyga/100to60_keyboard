@@ -1,11 +1,3 @@
-/*
-Context name    True when
-Editor contexts	
-editorFocus	    An editor has focus, either the text or a widget.
-editorTextFocus	The text in an editor has focus (cursor is blinking).
-textInputFocus	Any editor has focus (regular editor, debug REPL, etc.).
-inputFocus	    Any text input area has focus (editors or text boxes).
-*/
 [
   {
     "key": "ctrl+tab",
@@ -20,12 +12,12 @@ inputFocus	    Any text input area has focus (editors or text boxes).
     // "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup"
   },
   {
-    "key": "ctrl+shift+4",
+    "key": "ctrl+shift+[Digit4]",
     "command": "workbench.action.terminal.kill"
   },
   // bind delete to backspace
   {
-    "key": "shift+backspace",
+    "key": "shift+[backspace]",
     "command": "deleteRight",
     "when": "textInputFocus && !editorReadonly"
   },
@@ -107,29 +99,33 @@ inputFocus	    Any text input area has focus (editors or text boxes).
   },
   // move lines vertically
   {
-    "key": "shift+alt+i",
+    "key": "alt+i",
     "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "shift+alt+k",
+    "key": "alt+k",
     "command": "editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
   },
   // outdentLines indentLines
   {
-    "key": "shift+alt+j",
+    "key": "alt+j",
     "command": "editor.action.outdentLines",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "shift+alt+l",
+    "key": "alt+l",
     "command": "editor.action.indentLines",
     "when": "editorTextFocus && !editorReadonly"
   },
   // navigate back/forward
   {
     "key": "alt+u",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "alt+n",
     "command": "workbench.action.navigateBack"
   },
   {
@@ -147,7 +143,23 @@ inputFocus	    Any text input area has focus (editors or text boxes).
     "command": "-editor.action.moveCarretRightAction",
     "when": "editorTextFocus && !editorReadonly"
   },
-
+  
+  // insert Cursor
+  {
+    "key": "shift+alt+i",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+k",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+,",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  }
 
   // home, end with no shift to select, not needed
   {
@@ -226,25 +238,22 @@ inputFocus	    Any text input area has focus (editors or text boxes).
   },
   // move through eitors/groups
   {
-    "key": "ctrl+shift+j",
-    "command": "workbench.action.previousEditor"
-  },
-  {
     "key": "ctrl+shift+l",
-    "command": "workbench.action.nextEditor"
+    "command": "workbench.action.nextEditorInGroup"
   },
-  // to powinno przchodzić na kojelną aktywną grupę, ale nie działa
   {
-    //"key": "ctrl+shift+alt+j",
-    "key": "ctrl+j ctrl+shift+j",
-    //"command": "workbench.action.previousEditor"
-    "command": "workbench.action.moveActiveEditorGroupLeft"
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.previousEditorInGroup"
   },
   {
     //"key": "ctrl+shift+alt+l",
     "key": "ctrl+l ctrl+shift+l",
-    //"command": "workbench.action.nextEditor"
-    "command": "workbench.action.moveActiveEditorGroupRight"
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    //"key": "ctrl+shift+alt+j",
+    "key": "ctrl+j ctrl+shift+j",
+    "command": "workbench.action.previousEditor"
   },
   // remove some alt lineJumpers
   {
@@ -432,8 +441,13 @@ inputFocus	    Any text input area has focus (editors or text boxes).
     "command": "workbench.action.togglePanel"
   },
   {
-    "key": "delete",
-    "command": "-deleteRight",
-    "when": "textInputFocus"
+    "key": "shift+space",
+    "command": "editor.action.toggleRenderWhitespace"
+  },
+  {
+    "key": "ctrl+m",
+    "command": "editor.action.toggleMinimap",
+    "when": "editorTextFocus && !editorReadonly"
   }
+
 ]

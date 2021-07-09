@@ -7,7 +7,7 @@ Keyboad layout that aims to use 60% of keyboard with (at least) 101% efficiency.
 Learned touch typing and tired of moving right hand fingers form `jkl` to &#8592;&#8595;&#8594; constantly? That's why!
 
 ## What does it do?
-Cursor movement (arrows), selecting, moving, copying, scorlling, switching, navigating, resizing with `ijkl` (and vicinity) in `VSC` and `Ubuntu`.
+Cursor movement (arrows), selecting, moving, inserting, copying, scorlling, switching, navigating, resizing with `ijkl` (and vicinity) in `VSC` and `Ubuntu`.
 
 ### Core functions
 - cursor movement (arrows) with `ijkl`
@@ -15,20 +15,23 @@ Cursor movement (arrows), selecting, moving, copying, scorlling, switching, navi
 - Home, End, PageUp, PageDown diagonally to `ijkl` like in numpad
 - moving, copying lines with in VSC `ijkl`
 - scrolling, moving and switching VSC editors with `ijkl`
-- switching, moving Ubuntu workspaces with `ijkl`
+- manage Ubuntu's `Workspaces` with `Super` and `ijkl`
 - improved `Backspece`
-
-
+<!---switching, moving--->
 
 # Installation 
-- add keyboard layout from attached `pl` to /usr/share/X11/xkb/symbols/pl
-- update /usr/share/X11/xkb/rules/evdev.xml with `evdev.xml` (add it among other Polish variants)
-- restart Ubuntu and choose `Polish (60%)` keyboard layout
+- copy partial keyboard layout form `symbols/60` to /usr/share/X11/xkb/symbols/
+- modify keyboard layout in /usr/share/X11/xkb/symbols/pl with `symbols/pl`; add it after first layout (default partial alphanumeric_keys should be first)
+- modify /usr/share/X11/xkb/rules/evdev.xml with `rules/evdev.xml` (add it among other Polish variants)
+- modify /usr/share/X11/xkb/rules/base.xml with `rules/base.xml` (like above)
+- modify /usr/share/X11/xkb/rules/evdev.lst with `rules/evdev.lst` (like above)
+- modify /usr/share/X11/xkb/rules/base.lst with `rules/base.lst` (like above)
+- choose `Polish (60)` keyboard layout and restart Ubuntu
 - add `keybinding.json` to VSC (ctrl+k ctr+s, Open Keyboard Shortcuts)
-- install line-jumper (in VSC <ctrl+shift+x>) 
+- install `line-jumper` (in VSC <ctrl+shift+x>) 
 - install `dconf` with ubuntu software and apply files from dconf folder
 - install `Tweaks` with `sudo apt install gnome-tweak-tool`
-
+<!---copy pl file to xkb folder; add paste update--->
 
 
 # Keyboard layout
@@ -41,13 +44,15 @@ k|down
 j|left
 l|right
 
+In most key combinations `alt_gr+,` works as `alt_gr+k`
+
 ---
 
 **move by character/line (arrows)** [vsc]
 alt|move cursor
 -:|:-
 e|up
-s|down
+d|down
 s|left
 f|right
 
@@ -67,8 +72,8 @@ l|word right
 alt_gr|move cursor
 -:|:-
 o|page up
-.|page down
-u|beginning of line
+. or ;|page down
+u or n|beginning of line
 m|end of line
 
 ---
@@ -98,20 +103,29 @@ l|word right
 shift+alt_gr|select
 -:|:-
 o|page up
-.|page down
-u|beggining of line
+. or ;|page down
+u or n|beggining of line
 m|end of line
 
 ---
 
 ## moving/copying line
 **move line arrowkey direction by line/tab** [vsc]
-shift+alt|move
+alt|move
 -:|:-
 i|line up
 k|line down
 j|line left
 l|line right
+
+---
+
+## insert cursor
+**indert cursor** [vsc]
+shift+alt|insert cursor
+-:|:-
+i|above
+k|below
 
 ---
 
@@ -161,7 +175,7 @@ l|next Editor
 ctrl+alt_gr|-
 -:|-
 o|previous Editor
-.|next Editor
+. or ;|next Editor
 
 ---
 
@@ -170,7 +184,7 @@ o|previous Editor
 ctrl+shift+alt_gr|-
 -:|:-
 o|Move Editor Left
-.|Move Editor Right
+. or ;|Move Editor Right
 
 ctrl+° ctrl+alt+°|-
 -:|-
@@ -182,7 +196,7 @@ l|Move Editor into Next Group
 **navigate back/forward**
 alt|-
 -:|:-
-u|navigate back
+u or n|navigate back
 m|navigate forward
 
 ---
@@ -198,11 +212,10 @@ bksp|-|shift
 ---
 
 ## diacritics
-**move *<ó>* and *<ł>* one key right** [xkb]
-alt_gr|-
+**polish diacritics** [xkb]
+alt_gr+caps_lock|-
 -:|:-
-p|ó
-;|ł
+a|ą
 
 ---
 
@@ -215,38 +228,36 @@ ctrl+k ctrl+shift+i|format document
 ctrl+shift+f|select highlights
 ctrl+shift+4|terminal.kill
 alt_gr+,|down
-Caps_Lock|alt_gr
+Caps_Lock|ISO_Level5_Shift
+Backslash|ISO_Level5_Shift
 
 Caps_Lock|Switch
 -:|:-
-shift_L+shift_P|On
-shift_P+shift_L|On
-shift_L|Off
-shift_P|Off
-
+shift_L+shift_P|On/Off
+shift_P+shift_L|On/Off
 
 
 ---
 
 ## switching workspace
 **switch to workspace - set 4 static workspaces in Tweaks** [dconf, Tweaks]
-super|-
--:|:-
-i|switch to workspace 1
-k|switch to workspace 2
-j|switch to workspace 3
-l|switch to workspace 4
+super|super|-
+-:|-:|:-
+i|e|switch to workspace 1
+k|d|switch to workspace 2
+j|s|switch to workspace 3
+l|f|switch to workspace 4
 
 ---
 
 ## moving workspace
 **move to workspace** [dconf]
-super+shift|-
--:|:-
-i|move to workspace 1
-k|move to workspace 2
-j|move to workspace 3
-l|move to workspace 4
+super+shift|super+shift|-
+-:|-:|:-
+i|e|move to workspace 1
+k|d|move to workspace 2
+j|s|move to workspace 3
+l|f|move to workspace 4
 
 ---
 

@@ -1,0 +1,23 @@
+// This shouldn't be here.
+// Set CapsLock when pressed with the other Ctrl key, release it when pressed alone.
+partial modifier_keys
+xkb_symbols "lctrl_both_capslock_cancel" {
+  key <LCTL> {
+    type[Group1]="ALPHABETIC",
+    symbols[Group1] = [ Control_L, Caps_Lock ]
+  };
+};
+// Set CapsLock when pressed with the other Ctrl key, release it when pressed alone.
+partial modifier_keys
+xkb_symbols "rctrl_both_capslock_cancel" {
+  key <RCTL> {
+    type[Group1]="ALPHABETIC",
+    symbols[Group1] = [ Control_R, Caps_Lock ]
+  };
+};
+partial modifier_keys
+xkb_symbols "ctrl_both_capslock_cancel" {
+  include "shift(lctrl_both_capslock_cancel)"
+  include "shift(rctrl_both_capslock_cancel)"
+};
+
