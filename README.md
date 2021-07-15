@@ -17,6 +17,35 @@ Cursor movement (arrows), selecting, moving, inserting, copying, scorlling, swit
 - scrolling, moving and switching VSC editors with `ijkl`
 - manage Ubuntu's `Workspaces` with `Super` and `ijkl`
 - improved `Backspece`
+- caps_lock and backslash chooses level 5
+- additional numeric block at right hand on level 6
+- duplicated symbols at left hand on levels 3 and 5
+
+---
+    // lvl_1
+    // alphabet
+
+    // lvl_2
+    // ALPHABET
+    
+    // lvl_3
+    // left hand         right hand
+    // '"/\|            |home| up |pgup
+    // =+-_~            |left|down|right|pgdown
+    // [{(<>        home|end |down|pgdown
+
+    // lvl_5 and lvl_6
+    // left hand         right hand
+    // !@#$%             7890
+    // ^&*_?             456
+    // ;:,.             0123
+
+    // lvl_7
+    // diacritics
+
+    // lvl_8
+    // DIACRITICS
+---
 <!---switching, moving--->
 
 # Installation 
@@ -26,7 +55,7 @@ Cursor movement (arrows), selecting, moving, inserting, copying, scorlling, swit
 - modify /usr/share/X11/xkb/rules/base.xml with `rules/base.xml` (like above)
 - modify /usr/share/X11/xkb/rules/evdev.lst with `rules/evdev.lst` (like above)
 - modify /usr/share/X11/xkb/rules/base.lst with `rules/base.lst` (like above)
-- choose `Polish (60)` keyboard layout and restart Ubuntu
+- choose `Polish (60)` keyboard layout and restart Ubuntu (VSC detects your current keyboard layout on start-up and then caches this information.)
 - add `keybinding.json` to VSC (ctrl+k ctr+s, Open Keyboard Shortcuts)
 - install `line-jumper` (in VSC <ctrl+shift+x>) 
 - install `dconf` with ubuntu software and apply files from dconf folder
@@ -45,16 +74,6 @@ j|left
 l|right
 
 In most key combinations `alt_gr+,` works as `alt_gr+k`
-
----
-
-**move by character/line (arrows)** [vsc]
-alt|move cursor
--:|:-
-e|up
-d|down
-s|left
-f|right
 
 ---
 
@@ -120,8 +139,17 @@ l|line right
 
 ---
 
+## move selected
+**move selected** [vsc]
+shift+alt|move selected
+-:|:-
+j|left
+l|right
+
+---
+
 ## insert cursor
-**indert cursor** [vsc]
+**insert cursor** [vsc]
 shift+alt|insert cursor
 -:|:-
 i|above
@@ -165,17 +193,21 @@ ctrl+shift+tab|previous Editor In Group
 
 ---
 
-**switch without goup** [vsc]
-
-ctrl+° ctrl+shift+°|-
--:|-
-j|previous Editor
-l|next Editor
-
+**switch witout goup** [vsc]
 ctrl+alt_gr|-
 -:|-
 o|previous Editor
 . or ;|next Editor
+
+---
+
+## switch group
+**switch group** [vsc]
+
+ctrl+° ctrl+shift+°|-
+-:|-
+j|previous Group
+l|next Group
 
 ---
 
@@ -193,8 +225,16 @@ l|Move Editor into Next Group
 
 ---
 ## navigating
-**navigate back/forward**
+**navigate back/forward without editor** [vsc]
 alt|-
+-:|:-
+u or n|navigate back
+m|navigate forward
+
+---
+
+**navigate back/forward within editor** [vsc]
+shift+alt|-
 -:|:-
 u or n|navigate back
 m|navigate forward
@@ -216,6 +256,14 @@ bksp|-|shift
 alt_gr+caps_lock|-
 -:|:-
 a|ą
+e|ę
+o|ó
+l|ł
+n|ń
+c|ć
+s|ś
+z|ż
+x|ź
 
 ---
 

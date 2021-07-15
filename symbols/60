@@ -1,3 +1,57 @@
+default partial
+xkb_symbols "basic" {
+
+    // Contact: Łukasz Łodożyński <lodyga@o2.pl>
+
+    include "60(arrows)"
+
+    // modifiers
+    //  <A...> { [ none         shift       lvl_3           shift+lvl_3     lvl_5           shift+lvl_5     lvl_5+lvl_3     all         ] };
+
+    key.type[group1]="EIGHT_LEVEL_SEMIALPHABETIC";
+    key <AD01> { [ q,           Q,          apostrophe,     NoSymbol,       exclam,         1,              NoSymbol,       NoSymbol    ] };
+    key <AD02> { [ w,           W,          quotedbl,       NoSymbol,       at,             2,              NoSymbol,       NoSymbol    ] };
+    key <AD03> { [ e,           E,          slash,          NoSymbol,       numbersign,     3,              eogonek,        Eogonek     ] };
+    key <AD04> { [ r,           R,          backslash,      NoSymbol,       dollar,         4,              NoSymbol,       NoSymbol    ] };
+    key <AD05> { [ t,           T,          bar,            NoSymbol,       percent,        5,              NoSymbol,       NoSymbol    ] };
+    key <AD06> { [ y,           Y,          NoSymbol,       NoSymbol,       asciicircum,    6,              NoSymbol,       NoSymbol    ] };
+    key <AD11> { [ bracketleft, braceleft,  parenleft,      less,           less,           NoSymbol,       NoSymbol,       NoSymbol    ] };
+    key <AD12> { [ bracketright,braceright, parenright,     greater,        greater,        NoSymbol,       NoSymbol,       NoSymbol    ] };
+
+    key <AC01> { [ a,           A,          equal,          NoSymbol,       asciicircum,    asciicircum,    aogonek,        Aogonek     ] };
+    key <AC02> { [ s,           S,          plus,           NoSymbol,       ampersand,      ampersand,      sacute,         Sacute      ] };
+    key <AC03> { [ d,           D,          minus,          NoSymbol,       asterisk,       asterisk,       sacute,         Sacute      ] };
+    key <AC04> { [ f,           F,          underscore,     space,          underscore,     space,          NoSymbol,       NoSymbol    ] };
+    key <AC05> { [ g,           G,          asciitilde,     grave,          question,       NoSymbol,       NoSymbol,       NoSymbol    ] };
+    key <AC06> { [ h,           H,          NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol    ] };
+    key <AC11> { [ apostrophe,  quotedbl,   apostrophe,     quotedbl,       grave,          quotedbl,       apostrophe,     quotedbl    ] };
+
+    key <AB01> { [ z,           Z,          bracketleft,    bracketright,   semicolon,      NoSymbol,       zabovedot,      Zabovedot   ] };
+    key <AB02> { [ x,           X,          braceleft,      braceright,     colon,          NoSymbol,       zacute,         Zacute      ] };
+    key <AB03> { [ c,           C,          parenleft,      parenright,     comma,          NoSymbol,       cacute,         Cacute      ] };
+    key <AB04> { [ v,           V,          less,           greater,        period,         NoSymbol,       NoSymbol,       NoSymbol    ] };
+    key <AB05> { [ b,           B,          greater,        NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol    ] };
+    key <AB10> { [ slash,       question,   NoSymbol,       NoSymbol,       slash,          question,       NoSymbol,       NoSymbol    ] };
+
+    key <SPCE> { [ space,       space,      underscore,     space,          nobreakspace,   space,          space,          space       ] };
+
+    key.type[Group1] = "ONE_LEVEL";
+    key <ESC>   { [ Escape              ] };
+    key <TLDE>  { [ Escape              ] };
+    key <MENU>  { [ Super_L             ] };
+    key <BKSL>	{ [ ISO_Level5_Shift    ] };
+    // key <RTRN>  { [ ISO_Level5_Shift    ] };
+
+    include "kpdl(comma)"
+    include "level3(ralt_switch)"
+    include "level5(caps_switch)"
+    include "level5(modifier_mapping)"
+    include "shift(both_capslock)"
+    include "60(E)"
+};
+
+
+
 xkb_symbols "E" {
     key.type[group1]="EIGHT_LEVEL";
     key <AE01> { [ 1,           exclam,     exclam,     1,          notequal,       exclamdown     ] };
@@ -15,6 +69,7 @@ xkb_symbols "E" {
 };
 
 
+
 xkb_symbols "Er" {
     key.type[group1]="EIGHT_LEVEL";
     key <AE01> { [ exclam,     1,           1,          exclam,     notequal,       exclamdown     ] };
@@ -30,6 +85,7 @@ xkb_symbols "Er" {
     key <AE11> { [ underscore, minus,       minus,      underscore, endash,         emdash         ] };
     key <AE12> { [ plus,       equal,       equal,      plus,       minus,          underscore     ] };
 };
+
 
 
 xkb_symbols "Fn" {
@@ -56,7 +112,7 @@ xkb_symbols "arrows" {
     key <AD08> { [ i,           I,          Up,             Up,             asterisk,       8,              NoSymbol,       NoSymbol    ] };
     key <AD09> { [ o,           O,          Prior,          Prior,          parenleft,      9,              oacute,         Oacute      ] };
     key <AD10> { [ p,           P,          NoSymbol,       NoSymbol,       parenright,     0,              NoSymbol,       NoSymbol    ] };
-     
+    
     key <AC07> { [ j,           J,          Left,           Left,           equal,          4,              NoSymbol,       NoSymbol    ] };
     key <AC08> { [ k,           K,          Down,           Down,           plus,           5,              NoSymbol,       NoSymbol    ] };
     key <AC09> { [ l,           L,          Right,          Right,          minus,          6,              lstroke,        Lstroke     ] };
@@ -67,11 +123,3 @@ xkb_symbols "arrows" {
     key <AB08> { [ comma,       less,       Down,           Down,           comma,          2,              NoSymbol,       NoSymbol    ] };
     key <AB09> { [ period,      greater,    Next,           Next,           period,         3,              NoSymbol,       NoSymbol    ] };
 };
-
-
-//    key <AD01> { [ q,           Q,          NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol    ] };
-//    key <AD02> { [ w,           W,          ampersand,      NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol    ] };
-//    key <AD03> { [ e,           E,          bar,            NoSymbol,       bar,            NoSymbol,       eogonek,        Eogonek     ] };
-//    key <AD04> { [ r,           R,          slash,          NoSymbol,       slash,          NoSymbol,       NoSymbol,       NoSymbol    ] };
-//    key <AD05> { [ t,           T,          backslash,      NoSymbol,       backslash,      NoSymbol,       NoSymbol,       NoSymbol    ] };
-//    key <AD06> { [ y,           Y,          NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol,       NoSymbol    ] };
