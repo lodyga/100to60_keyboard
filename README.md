@@ -34,6 +34,10 @@ Cursor movement (arrows), selecting, moving, inserting, copying, scorlling, swit
     // =+-_~            |left|down|right|pgdown
     // [{(<>        home|end |down|pgdown
 
+    // lvl_4
+    //    `
+    // ]})>
+
     // lvl_5 and lvl_6
     // left hand         right hand
     // !@#$%             7890
